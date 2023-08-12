@@ -1,0 +1,80 @@
+//lecture 41 post fix
+
+class Solution {
+  public static int evaluatePostFix(String s)
+  {
+    Stack<Integer> stack = new Stack<>();
+    for(int i=0;i<s.length();i++)
+    {
+      char c = s.charAt(i);
+      //operand
+      if(character.isDigit(c))
+      {
+        stack.push(c '0');
+      }
+      else //operator
+      {
+        int right = stack.pop();
+        int left = stack .pop();
+        int res = calculate(left,right,c);
+        stack.push(res);
+
+      }
+      return stack.pop();
+
+    }
+    static int calculation (int left,int right,char c)
+    {
+      if('c' =="*")return left *right;
+      elseif('c' =="+")return left+right;
+      elseif('c' =="-")return left-right;
+      return -1;
+
+      
+
+    }
+  }
+}
+
+package stacks;
+public class InfixToPostfix
+{
+  public static void main(String args[])
+  {
+    String Infix = "3+4*5";
+    String infix1 = "3+4*5";
+    System.out.println(indix to post fix(postfix(indix)));
+    System.out.println(indixtopostfix(infix1));
+
+  }
+ String InfixToPostfix(String infix)
+ {
+  String res = "";
+  Stack<character>stack = new Stack();
+  for(int i=0;i<infix.length();i++)
+  {
+    cahr c = infix .charAt(i);
+    if(character.isDigit(c));
+    {
+      res = res + c;
+
+    }
+    else {
+      while(precedence(stack.peek()>=precedence(c);
+      {
+        res = res +stack.pop();
+      }
+      return res;
+      stack.push(c);
+    }
+  }
+  static int precedence(char c)
+
+{
+    if(a=='{' && b =='}') return true;
+    if(a== '[' && b==']') return true;
+    if(a=='(' && b==')') return true;
+    
+  }
+ } 
+}
